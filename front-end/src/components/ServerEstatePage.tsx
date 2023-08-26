@@ -94,12 +94,14 @@ const ServerEstatePage : React.FC = () =>{
         alignItems: 'center',
     }
 
+    // eslint-disable-next-line
     useEffect(()=> {fetch().then()},[])
     useEffect(()=>{
         drawChart()
         const cvs = chartRef.current!!
         cvs.width = document.documentElement.clientWidth * 0.5
         cvs.height = document.documentElement.clientHeight * 0.3
+        // eslint-disable-next-line
     },[estate])
 
     return (
