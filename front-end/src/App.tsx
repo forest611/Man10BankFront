@@ -21,9 +21,9 @@ const App: React.FC = () => {
             <header>
               <ul className='header_link'>
                 <li><Link to="/bank/">Home</Link></li>
-                <li><Link to="/bank/balance">最新の銀行の残高をみる</Link></li>
-                <li><Link to="/bank/uuid">mcidからuuidを取得する</Link></li>
-                <li><Link to="/bank/estate">資産情報を見る</Link></li>
+                <li><Link to="/bank/balance">ユーザーの銀行残高</Link></li>
+                  <li><Link to="/bank/estate">ユーザー資産状況</Link></li>
+                <li><Link to="/bank/serverestate">サーバー資産状況</Link></li>
               </ul>
             </header>
             <body>
