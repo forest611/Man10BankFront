@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import {getIdSuggest, getUUID} from "../services/BankApi";
 import {EstateData, getEstate, getUserEstateHistory} from "../services/EstateApi";
 import {formatDate} from "../App";

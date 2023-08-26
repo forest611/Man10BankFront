@@ -1,8 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import {getServerEstateHistory, ServerEstateData} from "../services/EstateApi";
 import {formatDate} from "../App";
-import {Chart, Colors, registerables} from "chart.js";
-import {Console} from "inspector";
+import {Chart, registerables} from "chart.js";
 
 Chart.register(...registerables)
 let chart : Chart
@@ -10,7 +9,7 @@ let chart : Chart
 const ServerEstatePage : React.FC = () =>{
 
     const [estate,setEstate] = useState<ServerEstateData[]>()
-    const [day,setDay] = useState(30)
+    const [day] = useState(30)
     const chartRef = useRef<HTMLCanvasElement>(null)
 
     const fetch = async () => {
@@ -18,7 +17,7 @@ const ServerEstatePage : React.FC = () =>{
         setEstate(estate)
     }
     const showEstate = () =>{
-        if (estate == null || estate.length == 0)return '情報なし'
+        if (estate == null || estate.length === 0)return '情報なし'
         const data = estate[estate.length-1]
         return `更新日:${formatDate(new Date(data.date))}
         電子マネー:${data.vault.toLocaleString()}
