@@ -1,4 +1,5 @@
 import {apiUrl} from "../App";
+import {EstateData} from "./EstateApi";
 
 let apiRoute = '/bank/'
 
@@ -50,6 +51,19 @@ export async function getIdSuggest(mcid : string) {
         const array : string[] = await response.json()
         return array
     }catch (e) {
+        return []
+    }
+}
+
+export async function getBalanceTop(){
+    try {
+        const response = await fetch(`${apiUrl}/history/get-balance-top?record=10&skip=0`)
+        if (!response.ok){
+            throw new Error('Network response was not ok')
+        }
+        const array : EstateData[] = await response.json()
+        return array
+    }catch (e){
         return []
     }
 }

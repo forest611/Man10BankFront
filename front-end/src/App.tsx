@@ -8,6 +8,7 @@ import HomePage from "./components/HomePage";
 import './css/App.css'
 import './css/Header.css'
 import ServerEstatePage from "./components/ServerEstatePage";
+import BalanceTopPage from "./components/BalanceTopPage";
 
 export let apiUrl : string = ""
 
@@ -22,7 +23,7 @@ const App: React.FC = () => {
               <ul className='header_link'>
                 <li><Link to="/bank/">Home</Link></li>
                 <li><Link to="/bank/balance">ユーザーの銀行残高</Link></li>
-                  <li><Link to="/bank/estate">ユーザー資産状況</Link></li>
+                  <li><Link to="/bank/balancetop">資産トップ</Link></li>
                 <li><Link to="/bank/serverestate">サーバー資産状況</Link></li>
               </ul>
             </header>
@@ -33,6 +34,7 @@ const App: React.FC = () => {
                 <Route path="/bank/uuid" element={<UuidPage />} />
                 <Route path="/bank/estate" element={<EstatePage/>} />
                 <Route path="/bank/serverestate" element={<ServerEstatePage/>} />
+                <Route path="/bank/balancetop" element={<BalanceTopPage />} />
               </Routes>
             </body>
         </Router>
