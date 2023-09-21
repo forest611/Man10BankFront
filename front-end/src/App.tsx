@@ -22,7 +22,7 @@ const App: React.FC = () => {
             <header>
               <ul className='header_link'>
                 <li><Link to="/bank/">Home</Link></li>
-                <li><Link to="/bank/balance">ユーザーの銀行残高</Link></li>
+                <li><Link to="/bank/estate">ユーザーの資産</Link></li>
                   <li><Link to="/bank/balancetop">資産トップ</Link></li>
                 <li><Link to="/bank/serverestate">サーバー資産状況</Link></li>
               </ul>
